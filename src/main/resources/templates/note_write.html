@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>个人相册-记事</title>
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+    <script th:src="@{/js/wysiwyg.js}
+"></script>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+
+    <textarea id="txtCode" rows="5" cols="50" style="width:100%"></textarea>
+    <input type="reset" value="重写"/>
+    <input type="submit" value="提交"/>
+</form>
+<body>
+<header th:replace="menu/header :: header"></header>
+<h1>写记事</h1>
+<hr/>
+<form name="example" method="post" action="#">
+    <table>
+        <tr>
+            <td>作者：<input type="text" name="author" id="author" th:value="${session.user.userName}"
+                          readonly="readonly"/></td>
+        </tr>
+    </table>
+    <br/>
+
+    <div class="form-group">
+        <label>标题：</label>
+        <input type="text" class="form-control" name="title" placeholder="请输入标题" width="50px"/>
+    </div>
+    <br/>
+
+    <div id="divEditor"></div>
+<footer th:replace="menu/footer :: footer"></footer>
+</body>
+<!-- 加载文本编辑框 -->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    $(document).ready(function () {
+        generate_wysiwyg('textarea2');
+    });
+    /*]]>*/
+</script>
+</html>

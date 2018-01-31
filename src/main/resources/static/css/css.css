@@ -1,0 +1,9 @@
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+* {	margin:0;padding:0;}
+body {background:#f9f9f9;}
+#clock {position: relative;width: 220px;height: 220px;list-style: none;	margin-left: -20px auto;background: url('../images/clock.png') no-repeat center;background-size:300px}
+#seconds, #minutes, #hours {position: absolute;width: 30px;height: 220px;left: 90px;}
+#date {position: absolute;top: 123px;color: #333;right: 48px;font-weight: bold;letter-spacing: 3px;font-family: "Microsoft Yahei";	font-size: 12px;line-height: 36px;}
+#hours {background: url('../images/hands.png') no-repeat left;z-index: 1000;}
+#minutes {background: url('../images/hands.png') no-repeat center;width:20px;z-index: 2000;}
+#seconds {background: url('../images/hands.png') no-repeat right;z-index: 3000;}

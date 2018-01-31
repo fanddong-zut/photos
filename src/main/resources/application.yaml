@@ -20,6 +20,9 @@ spring:
     mode: HTML5
     excluded-view-names:
     template-resolver-order:
+  #session存储方式
+  session:
+    store-type: none
 
 server:
   port: 80
@@ -27,3 +30,8 @@ server:
 #照片上传地址(需要手动创建目录)
 custom:
     savePath: E://uploadPhotos//
+
+#日志相关配置
+logging:
+  level: info
+  file: E://logs//photos.log

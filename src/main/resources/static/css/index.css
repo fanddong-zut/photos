@@ -1,0 +1,31 @@
+/*博客主页的css样式表*/
+
+/*
+body{
+	background: url(../img/background.jpg)no-repeat 0px 0px;
+	background-size:cover;
+	!*当页面其他部分滚动时，背景不会滚动*!
+	background-attachment: fixed;
+}
+*/
+
+
+.description {
+	margin-top: 20px;
+}
+
+/*版权所有*/
+.copyright {
+    margin: 3em 0 2em;
+    text-align: center;
+}
+.copyright p {
+    font-size: 1.2em;
+    color: #000000;
+}
+.copyright p a{
+    color: #000000;
+}
+.copyright p a:hover{
+    color: 	#2e6da4;
+}

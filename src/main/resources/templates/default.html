@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>个人相册</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!--头部导航栏-->
+<header th:replace="menu/header :: header"></header>
+
+<!--博客主页内容-->
+<div class="container" style="margin: 40px;">
+    <div class="row">
+        <div class="col-sm-2" id="leftDate">
+            <!-- 个人简介开始 -->
+            <div class="description">
+                <h3 class="h3">个人简介</h3>
+                <!-- 插入个人头像 -->
+                <p>
+                    <image src="/img/perpic.jpeg" alt="个人头像" class="img-circle" width="70%"></image>
+                </p>
+                <b>Email：</b>
+                <p th:text="${session.userInfo.email}"></p>
+                <b>City：</b>
+                <p th:text="${session.userInfo.place}"></p>
+                <b>Sign：</b>
+                <p th:text="${session.userInfo.sign}"></p>
+            </div>
+            <!-- 个人简介结束 -->
+        </div>
+
+        <!-- 右侧春夏秋冬四季图片显示 -->
+        <div class="col-sm-10">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img src="/img/season/01.jpg" width="100%" alt="通用的占位符缩略图"/>
+                        <div class="caption">
+                            <h3>春季</h3>
+                            <p>新年都未有芳华，二月初惊见草芽。</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button" data-toggle="tooltip"
+                                   data-placement="right" title="点击查看3、4、5月发生的事"> 按钮</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img src="/img/season/02.jpg" width="100%" alt="通用的占位符缩略图"/>
+                        <div class="caption">
+                            <h3>夏季</h3>
+                            <p>纷纷红紫已成尘，布谷声中夏令新。</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button" data-toggle="tooltip"
+                                   data-placement="right" title="点击查看6、7、8月发生的事"> 按钮</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img src="/img/season/03.jpg" width="100%" alt="通用的占位符缩略图"/>
+                        <div class="caption">
+                            <h3>秋季</h3>
+                            <p>树树皆秋色，山山唯落晖。</p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button" data-toggle="tooltip"
+                                   data-placement="right" title="点击查看9、10、11月发生的事"> 按钮</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="thumbnail">
+                        <img src="/img/season/04.jpg" width="100%" alt="通用的占位符缩略图"/>
+                        <div class="caption">
+                            <h3>冬季</h3>
+                            <p>燕山雪花大如席，纷纷吹落轩辕台。 </p>
+                            <p>
+                                <a href="#" class="btn btn-primary" role="button" data-toggle="tooltip"
+                                   data-placement="right" title="点击查看12、1、2月发生的事"> 按钮</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 底部版权部分 -->
+<footer th:replace="menu/footer :: footer"></footer>
+</body>
+</html>
